@@ -1,3 +1,3 @@
 # UserMicroservice
 
-User system using Micro Service Architecture
+User system using Microservice Architecture
