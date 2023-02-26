@@ -1,3 +1,3 @@
-# UserMicroservice
+# CommunityMicroservice
 
-User system using Microservice Architecture
+Community website using Microservice Architecture
