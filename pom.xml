@@ -11,5 +11,6 @@
 		<module>UserService</module>
 		<module>Client</module>
 		<module>APIGateway</module>
+		<module>ServiceRegistry</module>
 	</modules>
 </project>
