@@ -8,11 +8,12 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>UserService</module>
-		<module>Client</module>
 		<module>APIGateway</module>
 		<module>ServiceRegistry</module>
 		<module>ConfigServer</module>
 		<module>Authentication</module>
+		<module>UserService</module>
+		<module>DepartmentService</module>
+		<module>Client</module>
 	</modules>
 </project>
