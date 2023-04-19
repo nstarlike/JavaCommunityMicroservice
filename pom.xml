@@ -10,5 +10,6 @@
 	<modules>
 		<module>UserService</module>
 		<module>Client</module>
+		<module>APIGateway</module>
 	</modules>
 </project>
