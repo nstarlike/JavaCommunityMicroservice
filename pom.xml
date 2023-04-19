@@ -13,5 +13,6 @@
 		<module>APIGateway</module>
 		<module>ServiceRegistry</module>
 		<module>ConfigServer</module>
+		<module>Authentication</module>
 	</modules>
 </project>
