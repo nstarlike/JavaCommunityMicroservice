@@ -4,7 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.SequenceGenerator;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.Setter;
@@ -18,8 +18,9 @@ import lombok.Getter;
 @Getter
 public class Department {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long Id;
+	@GeneratedValue(generator="DepartmentSeq")
+	@SequenceGenerator(name="DepartmentSeq", sequenceName="department_seq", allocationSize=5)
+	private Long id;
 	private String name;
 	private String address;
 	private String code;
