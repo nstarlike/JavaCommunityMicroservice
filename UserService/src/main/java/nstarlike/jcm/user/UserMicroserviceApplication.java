@@ -1,4 +1,4 @@
-package nstarlike.javacommunitymicroservice.userservice;
+package nstarlike.jcm.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
