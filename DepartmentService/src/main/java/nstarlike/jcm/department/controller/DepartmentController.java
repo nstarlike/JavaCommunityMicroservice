@@ -15,7 +15,7 @@ import nstarlike.jcm.department.model.Department;
 import nstarlike.jcm.department.service.DepartmentService;
 
 @RestController
-@RequestMapping("api/department")
+@RequestMapping("api/departments")
 @AllArgsConstructor
 public class DepartmentController {
 	private DepartmentService departmentService;
