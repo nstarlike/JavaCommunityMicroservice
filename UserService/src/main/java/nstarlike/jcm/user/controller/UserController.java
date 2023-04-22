@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import lombok.AllArgsConstructor;
 
 import nstarlike.jcm.user.model.User;
@@ -17,6 +18,7 @@ import nstarlike.jcm.user.service.UserService;
 @RestController
 @RequestMapping("api/users")
 @AllArgsConstructor
+@RefreshScope
 public class UserController {
 	private UserService userService;
 	

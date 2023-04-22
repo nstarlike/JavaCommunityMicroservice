@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 import lombok.AllArgsConstructor;
 
@@ -17,6 +18,7 @@ import nstarlike.jcm.department.service.DepartmentService;
 @RestController
 @RequestMapping("api/departments")
 @AllArgsConstructor
+@RefreshScope
 public class DepartmentController {
 	private DepartmentService departmentService;
 	
