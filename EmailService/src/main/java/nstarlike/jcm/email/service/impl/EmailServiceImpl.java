@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
+import org.springframework.kafka.annotation.KafkaListener;
 
 import nstarlike.jcm.email.service.EmailService;
 
@@ -12,6 +13,7 @@ public class EmailServiceImpl implements EmailService {
 	@Autowired
 	private JavaMailSender javaMailSender;
 	
+	@KafkaListener(topics="${spring.kafka.topic.name}", groupId="${spring.kafka.consumer.groupId")
 	@Override
 	public void sendSimpleMessage(String to, String subject, String text) {
 		SimpleMailMessage message = new SimpleMailMessage();
