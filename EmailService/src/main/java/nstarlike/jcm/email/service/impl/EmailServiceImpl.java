@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.kafka.annotation.KafkaListener;
 
 import nstarlike.jcm.email.service.EmailService;
+import nstarlike.jcm.user.dto.UserEvent;
 
 @Service
 public class EmailServiceImpl implements EmailService {
@@ -15,13 +16,17 @@ public class EmailServiceImpl implements EmailService {
 	
 	@KafkaListener(topics="${spring.kafka.topic.name}", groupId="${spring.kafka.consumer.groupId")
 	@Override
-	public void sendSimpleMessage(String to, String subject, String text) {
-		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom("test@gmail.com");
-		message.setTo(to);
-		message.setSubject(subject);
-		message.setText(text);
-		javaMailSender.send(message);
+	public void sendSimpleMessage(UserEvent userEvent) {
+		try {
+			SimpleMailMessage message = new SimpleMailMessage();
+			message.setFrom("test@gmail.com");
+			message.setTo(userEvent.getUser().getEmail());
+			message.setSubject(userEvent.getStatus());
+			message.setText(userEvent.getMessage());
+			javaMailSender.send(message);
+		}catch(Exception e) {
+			System.out.println("############# failed to send an email");
+		}
 	}
 
 }

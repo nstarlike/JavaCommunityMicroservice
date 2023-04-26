@@ -1,5 +1,7 @@
 package nstarlike.jcm.email.service;
 
+import nstarlike.jcm.user.dto.UserEvent;
+
 public interface EmailService {
-	public void sendSimpleMessage(String to, String subject, String messsage);
+	public void sendSimpleMessage(UserEvent userEvent);
 }
