@@ -1,10 +1,9 @@
-package nstarlike.jcm.email.dto;
+package nstarlike.jcm.user.dto;
 
 import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-
-import nstarlike.jcm.email.model.User;
+import nstarlike.jcm.user.model.User;
 
 @Data
 @AllArgsConstructor

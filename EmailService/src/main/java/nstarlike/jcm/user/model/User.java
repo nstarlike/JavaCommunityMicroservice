@@ -1,4 +1,4 @@
-package nstarlike.jcm.email.model;
+package nstarlike.jcm.user.model;
 
 import lombok.Data;
 import lombok.AllArgsConstructor;
