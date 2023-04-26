@@ -4,12 +4,14 @@ Community website using Microservice Architecture
 
 ## Components
 * API Gateway
-* Service Registry
+* Service Discovery
 * Config Server
 * Authorization Server
 * Core Services
   * User Service
   * Department Service
+  * Email Service
+* Client
   
 ## Languages
 * Java
@@ -21,12 +23,14 @@ Community website using Microservice Architecture
 ## Tools
 * Spring Boot
 * Spring Cloud
-* Netflix Eureka Server
+* Spring Security
+* Apache Kafka
 
 ## Technologies
 * REST API
 * Oauth2
 * MicroServices
+* Stream Processing
 
 ## Prerequisite
 * JDK17+
